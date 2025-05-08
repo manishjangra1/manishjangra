@@ -4,13 +4,13 @@ const About = () => {
   return (
     <motion.section
       id="about"
-      className="py-20 bg-white px-6"
+      className="py-20 bg-white px-6 flex items-center"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center flex-2/3">
         <h2 className="text-4xl font-bold text-gray-800 mb-6">About Me</h2>
         <p className="text-gray-600 text-lg max-w-3xl mx-auto">
           I'm a MERN stack developer with a passion for building full-stack web
@@ -37,6 +37,9 @@ const About = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="h-40 flex flex-1/3 justify-center items-center">
+        <img src="../src/assets/image.jpg" alt="bigImage" className="h-80 rounded-2xl shadow-2xl drop-shadow-stone-600"/>
       </div>
     </motion.section>
   );

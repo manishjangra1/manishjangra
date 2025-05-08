@@ -10,7 +10,6 @@ const Projects = () => {
       try {
         const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/projects`);
         const data = await res.json();
-        console.log(data.data.projects);
 
         setProjects(data.data.projects);
       } catch (error) {
@@ -31,7 +30,7 @@ const Projects = () => {
         </p>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard key={project._id} project={project} />
           ))}
         </div>
       </div>
